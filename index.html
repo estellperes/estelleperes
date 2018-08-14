@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <!-- Encodage des caractères pour que les accents s'affichent correctement-->
+    <meta charset="utf-8" />
+    <!-- Le titre de ma page  -->
+    <title>TITRE</title>
+    <!-- J'appelle ma feuille de style externe, dans le dossier "css" à côté de ce fichier html-->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- J'appelle la bibliothèque externe jquery -->
+    <script src="js/jquery-1.10.2.min.js" type="text/javascript"></script>
+    <!-- J'appelle la bibliothèque externe paperjs : http://paperjs.org/ qui servira pour la génération de formes -->
+    <script src="js/paper-full.min.js" type="text/javascript"></script>
+    <link href='http://fonts.googleapis.com/css?family=Comfortaa:700' rel='stylesheet' type='text/css'>
+    
+    <script type="text/javascript">  
+//$(document).ready(function() {
+// hides the slickbox as soon as the DOM is ready
+//$('#slickbox').hide();
+// shows the slickbox on clicking the noted link
+//$('#slick-show').click(function() {
+//$('#slickbox').show('slow');
+//return false;
+//});
+// hides the slickbox on clicking the noted link
+//$('#slick-hide').click(function() {
+//$('#slickbox').hide('fast');
+//    return false;
+//});
+// toggles the slickbox on clicking the noted link
+//$('#slick-toggle').click(function() {
+//return false;
+//});
+//});
+</script>
+ 
+    
+</head>
+
+<body>
+    <!-- le menu pour changer l'affichage et les sons -->
+    
+   <!-- <a id="simple-menu" href="#sidr">Toggle menu</a>-->
+ 
+<div id="sidr">
+  <!-- Your content -->
+    
+
+    
+<!--<nav>-->
+  <a id="slick-show" href="#"><img src="04.png"/></a>
+        
+        <ul id="slickbox">
+          
+             <li id="fondNoir">#</li>
+            <li id="fondViolet">#</li>
+            <li id="fondBleu">#</li>
+            <li id="fondTurquoise">#</li>
+            <li id="fondVert">#</li>
+            <li id="fondJaune">#</li>
+            <li id="fondOrange">#</li>
+            <li id="fondRouge">#</li>
+            <li id="fondBlanc">#</li>
+            <a id="home" href="index.html"><img src="home.png"/></a>
+        </ul>
+          
+<!--    </nav>-->
+</div>
+ 
+
+    <!--le canvas pour afficher le script générant les cercles-->
+    <canvas id="mycanvas" resize></canvas>
+    <script>
+        document.audios=[];
+        for(var a=0; a<12; a++){
+            document.audios[a] = document.createElement('audio');
+        }
+        
+        document.sounds = [
+            'sounds/si6.mp3','sounds/la6.mp3','sounds/sol6.mp3','sounds/fa6.mp3','sounds/mi6.mp3','sounds/ré6.mp3','sounds/do6.mp3',
+            'sounds/si5.mp3','sounds/la5.mp3','sounds/sol5.mp3','sounds/fa5.mp3','sounds/mi5.mp3','sounds/ré5.mp3','sounds/do5.mp3',
+            'sounds/si4.mp3','sounds/la4.mp3','sounds/sol4.mp3','sounds/fa4.mp3','sounds/mi4.mp3','sounds/ré4.mp3','sounds/do4.mp3'
+        ]
+    
+    </script>
+    <script type="text/paperscript" canvas="mycanvas">
+        //création des variables
+        var item;
+        var audioElement = document.createElement('audio');
+
+         //------------- le script générant les cercles utilisant paperjs
+         // The amount of circles we want to make:
+        var count = 180;
+
+         // Création d'un symbol (le cercle) qui sera appelé plusieurs fois par la suite :
+        var path = new Path.Circle({
+            center: [0, 0],
+            //taille des cercles
+            radius: 25,
+            //couleur de remplissage des cercles
+            fillColor: 'white',
+            opacity: 0.8,
+            
+        });
+
+         // Cération d'une variable symbol utilisant l'instance path
+        var symbol = new Symbol(path);
+    
+        
+         // Placement des instances dans le symbol:
+        for (var i = 0; i < count; i++) {
+            // La position du centre est placée au hasard:
+            var center = Point.random() * view.size;
+            var placedSymbol = symbol.place(center);
+            placedSymbol.scale(Math.random());
+            
+        }
+
+
+
+         // The onFrame function is called up to 60 times a second:
+        function onFrame(event) {
+            // Run through the active layer's children list and change
+            // the position of the placed symbols:
+            for (var i = 0; i < count; i++) {
+                item = project.activeLayer.children[i];
+
+
+
+                // Move the item 1/20th of its width to the right. This way
+                // larger circles move faster than smaller circles:
+                item.position.x += item.bounds.width / 40;
+                item.position.y += item.bounds.height / 40;
+
+
+
+                // If the item has left the view on the right, move it back
+                // to the left:
+                if (item.bounds.left > view.size.width) {
+                    item.position.x = -item.bounds.width;
+                }
+                // to the bottom:
+                if (item.bounds.bottom > view.size.height) {
+                    item.position.y = -item.bounds.height;
+                }
+
+
+                // ---------------------------------------- à chaque fois que je survole un cercle, je joue un son à partir d'un fichier externe
+                item.onMouseEnter = function(event) {
+                    var whichSound = Math.floor(this.scaling.x * document.sounds.length );
+                    var randomNumber = Math.round(Math.random() * document.audios.length);
+                    // console.log(this.scaling.x, whichSound, document.sounds.length)
+                    var whichAudio = document.audios[randomNumber];
+                    whichAudio.setAttribute('src', document.sounds[whichSound]);
+                    // console.log(document.sounds[whichSound])
+                    whichAudio.play();
+                    
+                }
+
+            }
+
+        }
+    </script>
+    <script>
+        // Création d'un élément audio dans js
+        var audioElementSample01 = document.createElement('audio');
+        
+         // Quand je clique sur l'élément qui a l'id fondRouge…
+        $("li#fondRouge").click(function() {
+            //…Je lance l'ambiance sonore associée
+            audioElementSample01.setAttribute('src', 'sounds/rouge.mp3');
+            audioElementSample01.setAttribute('autoplay', 'autoplay');
+            audioElementSample01.loop=true;
+            audioElementSample01.play();
+
+            //…je change l'animation css de l'arrièrre-plan
+            $('body').css("-webkit-animation-name", "animationRouge");
+        });
+         // Quand je clique sur l'élément qui a l'id fondBleu…
+        $("li#fondBleu").click(function() {
+            //…Je lance l'ambiance sonore associée
+            audioElementSample01.setAttribute('src', 'sounds/bleu.mp3');
+            audioElementSample01.setAttribute('autoplay', 'autoplay');
+            audioElementSample01.loop=true;
+            audioElementSample01.play();
+            //…je change l'animation css de l'arrièrre-plan
+            $('body').css("-webkit-animation-name", "animationBleu");
+        });
+        
+        // Quand je clique sur l'élément qui a l'id fondNoir…
+        $("li#fondNoir").click(function() {
+            //…Je lance l'ambiance sonore associée
+            audioElementSample01.setAttribute('src', 'sounds/noir.mp3');
+            audioElementSample01.setAttribute('autoplay', 'autoplay');
+            audioElementSample01.loop=true;
+            audioElementSample01.play();
+            //…je change la couleur de l'arrière-plan
+            $('body').css("-webkit-animation-name", "animationNoir");
+        });
+        
+         // Quand je clique sur l'élément qui a l'id fondViolet…
+        $("li#fondViolet").click(function() {
+            //…Je lance l'ambiance sonore associée
+            audioElementSample01.setAttribute('src', 'sounds/violet.mp3');
+            audioElementSample01.setAttribute('autoplay', 'autoplay');
+            audioElementSample01.loop=true;
+            audioElementSample01.play();
+            //…je change la couleur de l'arrière-plan
+            $('body').css("-webkit-animation-name", "animationViolet");
+        });
+        
+         // Quand je clique sur l'élément qui a l'id fondTurquoise…
+        $("li#fondTurquoise").click(function() {
+            //…Je lance l'ambiance sonore associée
+            audioElementSample01.setAttribute('src', 'sounds/turquoise.mp3');
+            audioElementSample01.setAttribute('autoplay', 'autoplay');
+            audioElementSample01.loop=true;
+            audioElementSample01.play();
+            //…je change la couleur de l'arrière-plan
+            $('body').css("-webkit-animation-name", "animationTurquoise");
+        });
+        
+         // Quand je clique sur l'élément qui a l'id fondVert…
+        $("li#fondVert").click(function() {
+            //…Je lance l'ambiance sonore associée
+            audioElementSample01.setAttribute('src', 'sounds/vert.mp3');
+            audioElementSample01.setAttribute('autoplay', 'autoplay');
+            audioElementSample01.loop=true;
+            audioElementSample01.play();
+            //…je change la couleur de l'arrière-plan
+            $('body').css("-webkit-animation-name", "animationVert");
+        });
+        
+         // Quand je clique sur l'élément qui a l'id fondJaune…
+        $("li#fondJaune").click(function() {
+            //…Je lance l'ambiance sonore associée
+            audioElementSample01.setAttribute('src', 'sounds/jaune.mp3');
+            audioElementSample01.setAttribute('autoplay', 'autoplay');
+            audioElementSample01.loop=true;
+            audioElementSample01.play();
+            //…je change la couleur de l'arrière-plan
+            $('body').css("-webkit-animation-name", "animationJaune");
+        });
+        
+         // Quand je clique sur l'élément qui a l'id fondOrange…
+        $("li#fondOrange").click(function() {
+            //…Je lance l'ambiance sonore associée
+            audioElementSample01.setAttribute('src', 'sounds/orange.mp3');
+            audioElementSample01.setAttribute('autoplay', 'autoplay');
+            audioElementSample01.loop=true;
+            audioElementSample01.play();
+            //…je change la couleur de l'arrière-plan
+            $('body').css("-webkit-animation-name", "animationOrange");
+        });
+        
+         // Quand je clique sur l'élément qui a l'id fondBlanc…
+        $("li#fondBlanc").click(function() {
+            //…Je lance l'ambiance sonore associée
+            audioElementSample01.setAttribute('src', 'sounds/blanc.mp3');
+            audioElementSample01.setAttribute('autoplay', 'autoplay');
+            audioElementSample01.loop=true;
+            audioElementSample01.play();
+            //…je change la couleur de l'arrière-plan
+            $('body').css("-webkit-animation-name", "animationBlanc");
+        });
+        
+  
+ 
+        </script>
+    
+       
+        <script type="text/javascript">  
+//$(document).ready(function() {
+// hides the slickbox as soon as the DOM is ready
+//$('#slickbox').hide();
+ //   $('#slickbox').animate({ "bottom": "-100px" }, "slow");
+// shows the slickbox on clicking the noted link
+//$('#slick-show').click(function() {
+//$('#slickbox').show().animate({ "bottom": "50px" }, "slow");
+    
+//    $( "a#slick-show" ).click(function() {
+//  $( "#slickbox" ).slideToggle( "slow" );
+//});
+//    
+//    return false;
+//});
+//});
+            $( "#slickbox" ).hide();
+    
+$( "#slick-show" ).click(function() {
+  $( "#slickbox" ).slideToggle( "slow" );
+    $( "#slick-show" ).slideDown( "slow" );
+});
+
+    
+
+</script>
+    
+     
+</body>
+
+</html>
