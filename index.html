@@ -1,304 +1,196 @@
-<!doctype html>
-<html lang="fr">
-
+<!DOCTYPE html>
+<html>
 <head>
-    <!-- Encodage des caractères pour que les accents s'affichent correctement-->
-    <meta charset="utf-8" />
-    <!-- Le titre de ma page  -->
-    <title>TITRE</title>
-    <!-- J'appelle ma feuille de style externe, dans le dossier "css" à côté de ce fichier html-->
-    <link rel="stylesheet" href="css/style.css" />
+	<meta charset="utf-8">
 
-    <!-- J'appelle la bibliothèque externe jquery -->
-    <script src="js/jquery-1.10.2.min.js" type="text/javascript"></script>
-    <!-- J'appelle la bibliothèque externe paperjs : http://paperjs.org/ qui servira pour la génération de formes -->
-    <script src="js/paper-full.min.js" type="text/javascript"></script>
-    <link href='http://fonts.googleapis.com/css?family=Comfortaa:700' rel='stylesheet' type='text/css'>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<title>skrollr - parallax scrolling for the masses</title>
+
+	<link href="fixed-positioning.css" rel="stylesheet" type="text/css" />
+	<link href="main.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     
-    <script type="text/javascript">  
-//$(document).ready(function() {
-// hides the slickbox as soon as the DOM is ready
-//$('#slickbox').hide();
-// shows the slickbox on clicking the noted link
-//$('#slick-show').click(function() {
-//$('#slickbox').show('slow');
-//return false;
-//});
-// hides the slickbox on clicking the noted link
-//$('#slick-hide').click(function() {
-//$('#slickbox').hide('fast');
-//    return false;
-//});
-// toggles the slickbox on clicking the noted link
-//$('#slick-toggle').click(function() {
-//return false;
-//});
-//});
-</script>
- 
-    
+    <style type="text/css">
+	#thing {
+		width:32px;
+		height:32px;
+		border-radius:16px;
+		background:#fff;
+	}
+	</style>
+
 </head>
 
 <body>
-    <!-- le menu pour changer l'affichage et les sons -->
     
-   <!-- <a id="simple-menu" href="#sidr">Toggle menu</a>-->
- 
-<div id="sidr">
-  <!-- Your content -->
-    
+<!--  INTRO    -->
+<!--  INTRO    -->
+<!--  INTRO    -->
 
+<!--    <div id="pixels" data-0="top:0%;" data-10000="top:-10000%;"></div>-->
+	<div id="bg1" data-0="background-position:0px 0px;" data-end="background-position:-500px -10000px;"></div>
+	<div id="bg2" data-0="background-position:0px 0px;" data-end="background-position:-500px -8000px;"></div>
+	<div id="bg3" data-0="background-position:0px 0px;" data-end="background-position:-500px -6000px;"></div>
+
+<!--	<div id="progress" data-0="width:0%;background:hsl(200, 100%, 50%);" data-end="width:100%;background:hsl(920, 100%, 50%);"></div>-->
+
+    <div id="properties" data-0="top:0%;" data-8500="display:block;" data-9450="top:-100%;display:none;">
+        <img src="images/enchante.png" data-0="left:32%;" data-500="left:7%;"/>
+    </div> 
     
-<!--<nav>-->
-  <a id="slick-show" href="#"><img src="04.png"/></a>
-        
-        <ul id="slickbox">
-          
-             <li id="fondNoir">#</li>
-            <li id="fondViolet">#</li>
-            <li id="fondBleu">#</li>
-            <li id="fondTurquoise">#</li>
-            <li id="fondVert">#</li>
-            <li id="fondJaune">#</li>
-            <li id="fondOrange">#</li>
-            <li id="fondRouge">#</li>
-            <li id="fondBlanc">#</li>
-            <a id="home" href="index.html"><img src="home.png"/></a>
-        </ul>
-          
-<!--    </nav>-->
+    <div id="properties" data-300="top:20%; right:-55%; opacity:0.0;" data-1000="top:20%; opacity:1;" data-1400="display:block;" data-1700="display:none; opacity:0.0;">
+        <div class="textit">Je suis Estelle Peres, 
+bienvenue dans mon système solaire.
+Vous êtes sur le point de visiter la planète 
+Port’foli-O, mais avant cela, j’aimerai vous parler de moi, l’étoile de ce système.</div>
+       </div> 
+    
+    <div id="properties" data-1700="top:8%; right:-55%; opacity:0.0;" data-2400="top:8%; opacity:1;" data-2800="display:block;" data-3100="display:none; opacity:0.0;">
+        <div class="textc">Je me suis souvent demandée au cours de mes études pourquoi je voulais faire de l’art, du design graphique: 
+<br><br><div class="textitalic">Qu’est-ce que ça veut dire<br>«&#8239;être artiste&#8239;» ?</div>
+<br>Cette réponse, je n’ai commencée à la toucher du doigt qu’au cours de ma dernière année d’étude, et c’est en faisant une 
+pause après mon diplôme en poche que 
+j’ai pu encore plus me raprocher de 
+cette évidence.</div>
+       </div> 
+    
+    <div id="properties" data-3100="top:10%; right:-55%; opacity:0.0;" data-3800="top:10%; opacity:1;" data-4600="display:block;" data-4900="display:none; opacity:0.0;">
+        <div class="textc">Je suis créative, je pratique de multiples arts car c’est un besoin vital.
+<br><br>J’ai besoin d’exprimer mon monde intérieur, de délivrer un message.<br><br> J’ai cette capacité, de transformer une pensée, une émotion, un message en quelque chose de tangible, et c’est justement pour ça que j’ai choisi de devenir designer graphique. </div>
+       </div> 
+    
+    
+    <div id="properties" data-4900="top:8%; right:-55%; opacity:0.0;" data-5600="top:8%; opacity:1;" data-6400="display:block;" data-6700="display:none; opacity:0.0;">
+        <div class="textc">J’ai à coeur de mettre ce pouvoir qui est le mien au service des autres, de les aider à exprimer les messages qu’ils ont envie de crier au monde, de créer et rendre tangible ce monde intérieur de la meilleure manière qui soit. <br><br>C’est aussi pourquoi je me suis rapprochée et pratique de nombreuses formes d’arts, mais aussi étudie la sphère psychologique de l’humain. 
 </div>
- 
-
-    <!--le canvas pour afficher le script générant les cercles-->
-    <canvas id="mycanvas" resize></canvas>
-    <script>
-        document.audios=[];
-        for(var a=0; a<12; a++){
-            document.audios[a] = document.createElement('audio');
-        }
-        
-        document.sounds = [
-            'sounds/si6.mp3','sounds/la6.mp3','sounds/sol6.mp3','sounds/fa6.mp3','sounds/mi6.mp3','sounds/ré6.mp3','sounds/do6.mp3',
-            'sounds/si5.mp3','sounds/la5.mp3','sounds/sol5.mp3','sounds/fa5.mp3','sounds/mi5.mp3','sounds/ré5.mp3','sounds/do5.mp3',
-            'sounds/si4.mp3','sounds/la4.mp3','sounds/sol4.mp3','sounds/fa4.mp3','sounds/mi4.mp3','sounds/ré4.mp3','sounds/do4.mp3'
-        ]
+       </div> 
     
-    </script>
-    <script type="text/paperscript" canvas="mycanvas">
-        //création des variables
-        var item;
-        var audioElement = document.createElement('audio');
-
-         //------------- le script générant les cercles utilisant paperjs
-         // The amount of circles we want to make:
-        var count = 180;
-
-         // Création d'un symbol (le cercle) qui sera appelé plusieurs fois par la suite :
-        var path = new Path.Circle({
-            center: [0, 0],
-            //taille des cercles
-            radius: 25,
-            //couleur de remplissage des cercles
-            fillColor: 'white',
-            opacity: 0.8,
-            
-        });
-
-         // Cération d'une variable symbol utilisant l'instance path
-        var symbol = new Symbol(path);
     
-        
-         // Placement des instances dans le symbol:
-        for (var i = 0; i < count; i++) {
-            // La position du centre est placée au hasard:
-            var center = Point.random() * view.size;
-            var placedSymbol = symbol.place(center);
-            placedSymbol.scale(Math.random());
-            
-        }
-
-
-
-         // The onFrame function is called up to 60 times a second:
-        function onFrame(event) {
-            // Run through the active layer's children list and change
-            // the position of the placed symbols:
-            for (var i = 0; i < count; i++) {
-                item = project.activeLayer.children[i];
-
-
-
-                // Move the item 1/20th of its width to the right. This way
-                // larger circles move faster than smaller circles:
-                item.position.x += item.bounds.width / 40;
-                item.position.y += item.bounds.height / 40;
-
-
-
-                // If the item has left the view on the right, move it back
-                // to the left:
-                if (item.bounds.left > view.size.width) {
-                    item.position.x = -item.bounds.width;
-                }
-                // to the bottom:
-                if (item.bounds.bottom > view.size.height) {
-                    item.position.y = -item.bounds.height;
-                }
-
-
-                // ---------------------------------------- à chaque fois que je survole un cercle, je joue un son à partir d'un fichier externe
-                item.onMouseEnter = function(event) {
-                    var whichSound = Math.floor(this.scaling.x * document.sounds.length );
-                    var randomNumber = Math.round(Math.random() * document.audios.length);
-                    // console.log(this.scaling.x, whichSound, document.sounds.length)
-                    var whichAudio = document.audios[randomNumber];
-                    whichAudio.setAttribute('src', document.sounds[whichSound]);
-                    // console.log(document.sounds[whichSound])
-                    whichAudio.play();
-                    
-                }
-
-            }
-
-        }
-    </script>
-    <script>
-        // Création d'un élément audio dans js
-        var audioElementSample01 = document.createElement('audio');
-        
-         // Quand je clique sur l'élément qui a l'id fondRouge…
-        $("li#fondRouge").click(function() {
-            //…Je lance l'ambiance sonore associée
-            audioElementSample01.setAttribute('src', 'sounds/rouge.mp3');
-            audioElementSample01.setAttribute('autoplay', 'autoplay');
-            audioElementSample01.loop=true;
-            audioElementSample01.play();
-
-            //…je change l'animation css de l'arrièrre-plan
-            $('body').css("-webkit-animation-name", "animationRouge");
-        });
-         // Quand je clique sur l'élément qui a l'id fondBleu…
-        $("li#fondBleu").click(function() {
-            //…Je lance l'ambiance sonore associée
-            audioElementSample01.setAttribute('src', 'sounds/bleu.mp3');
-            audioElementSample01.setAttribute('autoplay', 'autoplay');
-            audioElementSample01.loop=true;
-            audioElementSample01.play();
-            //…je change l'animation css de l'arrièrre-plan
-            $('body').css("-webkit-animation-name", "animationBleu");
-        });
-        
-        // Quand je clique sur l'élément qui a l'id fondNoir…
-        $("li#fondNoir").click(function() {
-            //…Je lance l'ambiance sonore associée
-            audioElementSample01.setAttribute('src', 'sounds/noir.mp3');
-            audioElementSample01.setAttribute('autoplay', 'autoplay');
-            audioElementSample01.loop=true;
-            audioElementSample01.play();
-            //…je change la couleur de l'arrière-plan
-            $('body').css("-webkit-animation-name", "animationNoir");
-        });
-        
-         // Quand je clique sur l'élément qui a l'id fondViolet…
-        $("li#fondViolet").click(function() {
-            //…Je lance l'ambiance sonore associée
-            audioElementSample01.setAttribute('src', 'sounds/violet.mp3');
-            audioElementSample01.setAttribute('autoplay', 'autoplay');
-            audioElementSample01.loop=true;
-            audioElementSample01.play();
-            //…je change la couleur de l'arrière-plan
-            $('body').css("-webkit-animation-name", "animationViolet");
-        });
-        
-         // Quand je clique sur l'élément qui a l'id fondTurquoise…
-        $("li#fondTurquoise").click(function() {
-            //…Je lance l'ambiance sonore associée
-            audioElementSample01.setAttribute('src', 'sounds/turquoise.mp3');
-            audioElementSample01.setAttribute('autoplay', 'autoplay');
-            audioElementSample01.loop=true;
-            audioElementSample01.play();
-            //…je change la couleur de l'arrière-plan
-            $('body').css("-webkit-animation-name", "animationTurquoise");
-        });
-        
-         // Quand je clique sur l'élément qui a l'id fondVert…
-        $("li#fondVert").click(function() {
-            //…Je lance l'ambiance sonore associée
-            audioElementSample01.setAttribute('src', 'sounds/vert.mp3');
-            audioElementSample01.setAttribute('autoplay', 'autoplay');
-            audioElementSample01.loop=true;
-            audioElementSample01.play();
-            //…je change la couleur de l'arrière-plan
-            $('body').css("-webkit-animation-name", "animationVert");
-        });
-        
-         // Quand je clique sur l'élément qui a l'id fondJaune…
-        $("li#fondJaune").click(function() {
-            //…Je lance l'ambiance sonore associée
-            audioElementSample01.setAttribute('src', 'sounds/jaune.mp3');
-            audioElementSample01.setAttribute('autoplay', 'autoplay');
-            audioElementSample01.loop=true;
-            audioElementSample01.play();
-            //…je change la couleur de l'arrière-plan
-            $('body').css("-webkit-animation-name", "animationJaune");
-        });
-        
-         // Quand je clique sur l'élément qui a l'id fondOrange…
-        $("li#fondOrange").click(function() {
-            //…Je lance l'ambiance sonore associée
-            audioElementSample01.setAttribute('src', 'sounds/orange.mp3');
-            audioElementSample01.setAttribute('autoplay', 'autoplay');
-            audioElementSample01.loop=true;
-            audioElementSample01.play();
-            //…je change la couleur de l'arrière-plan
-            $('body').css("-webkit-animation-name", "animationOrange");
-        });
-        
-         // Quand je clique sur l'élément qui a l'id fondBlanc…
-        $("li#fondBlanc").click(function() {
-            //…Je lance l'ambiance sonore associée
-            audioElementSample01.setAttribute('src', 'sounds/blanc.mp3');
-            audioElementSample01.setAttribute('autoplay', 'autoplay');
-            audioElementSample01.loop=true;
-            audioElementSample01.play();
-            //…je change la couleur de l'arrière-plan
-            $('body').css("-webkit-animation-name", "animationBlanc");
-        });
-        
-  
- 
-        </script>
+    <div id="properties" data-6700="top:22%; right:-55%; opacity:0.0;" data-7500="top:22%; opacity:1.0;" data-8300="display:block;" data-8600="display:none; opacity:0.0;">
+        <div class="textc">Grâce à toutes ces cordes à mon arc, <br>je peux traduire de la meilleure manière, n’importe quelle demande inspirée, <br>et à mes yeux, <br>c’est la plus belle chose qui soit.
+</div>
+       </div>
     
-       
-        <script type="text/javascript">  
-//$(document).ready(function() {
-// hides the slickbox as soon as the DOM is ready
-//$('#slickbox').hide();
- //   $('#slickbox').animate({ "bottom": "-100px" }, "slow");
-// shows the slickbox on clicking the noted link
-//$('#slick-show').click(function() {
-//$('#slickbox').show().animate({ "bottom": "50px" }, "slow");
     
-//    $( "a#slick-show" ).click(function() {
-//  $( "#slickbox" ).slideToggle( "slow" );
-//});
-//    
-//    return false;
-//});
-//});
-            $( "#slickbox" ).hide();
+<!--  PLANETES CV    -->
+<!--  PLANETES CV    -->
+<!--  PLANETES CV    -->
     
-$( "#slick-show" ).click(function() {
-  $( "#slickbox" ).slideToggle( "slow" );
-    $( "#slick-show" ).slideDown( "slow" );
-});
+    
+    <div id="properties" data-9400="top:90%; opacity:0.0;" data-10200="top:0%; opacity:1.0;" data-10201="display:block;" data-11000="top:-100%; display:none; opacity:1.0;">
+            <img id="planetebleu" src="images/planetebleu.png"/>
+    </div> 
+    <div id="properties" data-10200="top:60%; opacity:0.0;" data-11000="top:0%;opacity:1.0;" data-11001="display:block;" data-11800="top:-100%; display:none;opacity:1.0;">  
+            <img id="planeteedu" src="images/planeteedu.png"/>        
+    </div>    
+    <div id="properties" data-11000="top:60%;opacity:0.0;" data-11800="top:0%;opacity:1.0;" data-11801="display:block;" data-12600="top:-100%; display:none;opacity:0.0;">
+            <img id="planetehobby" src="images/planetehobby.png"/>
+    </div>    
+    <div id="properties" data-11800="top:90%; right:-10%;opacity:0.0;" data-12600="top:0%;opacity:1.0;" data-12601="display:block;" data-13200="top:-100%; display:none;opacity:0.0;">
+            <img id="planeteskills" src="images/planeteskills.png"/>
+    </div>
+    <div id="properties" data-12600="top:90%; right:0;opacity:0.0;" data-13200="top:0%;opacity:1.0;" data-13201="display:block;" data-14000="top:-100%; display:none;opacity:0.0;">
+            <img id="planetejob" src="images/planetejob.png"/>
+    </div>
+    
+<!--  PORTFOLIO    -->   
+<!--  PORTFOLIO    -->
+<!--  PORTFOLIO    --> 
+    
+    <div id="properties" data-14000="top:100%; right:0;opacity:0.0;" data-15200="top:0%;opacity:1.0;" data-15201="display:block;" data-16000="top:-130%; display:none;opacity:1.0;">
+            <img id="portfolioimg" src="images/portfolio.png"/>
+    </div>
 
     
-
-</script>
     
-     
+    
+ <div id="properties" data-15200="top:100%; right:7%;opacity:0.0;" data-16000="top:0%;opacity:1.0;" data-16001="display:block;" data-16800="top:0%; display:none;opacity:1.0;">   
+    
+    <div class="container"> 
+  <div class="row">
+    
+      
+      <div class="col-sm-3 col-md-3 col-lg-3">
+          <a id"link01" href="#">
+             <div id="img01">
+                <img class="bottom" src="images/portnat04.jpg" />
+                <img class="top" src="images/port04.jpg" />
+          </div>   
+          </a>
+          
+      </div>
+      <div class="col-sm-3 col-md-3 col-lg-3">
+            <a id"link01" href="#">
+             <div id="img01">
+                <img class="bottom" src="images/portnat03.jpg" />
+                <img class="top" src="images/port03.jpg" />
+          </div>   
+          </a>
+    </div>
+      <div class="col-sm-3 col-md-3 col-lg-3">
+            <a id"link01" href="#">
+             <div id="img01">
+                <img class="bottom" src="images/portnat01.jpg" />
+                <img class="top" src="images/port01.jpg" />
+          </div>   
+          </a>
+    </div>
+      <div class="col-sm-3 col-md-3 col-lg-3">
+           <a id"link01" href="#">
+             <div id="img01">
+                <img class="bottom" src="images/portnat02.jpg" />
+                <img class="top" src="images/port02.jpg" />
+          </div>   
+          </a>
+    </div>
+      
+  </div>
+    
+    <div class="row">
+    
+      <div class="col-sm-3 col-md-3 col-lg-3">
+          <a id"link01" href="#">
+             <div id="img01">
+                <img class="bottom" src="images/portnat05.jpg" />
+                <img class="top" src="images/port05.jpg" />
+          </div>   
+          </a>
+          
+    </div>
+      <div class="col-sm-3 col-md-3 col-lg-3">
+            <a id"link01" href="#">
+             <div id="img01">
+                <img class="bottom" src="images/portnat07.jpg" />
+                <img class="top" src="images/port07.jpg" />
+          </div>   
+          </a>
+    </div>
+      <div class="col-sm-3 col-md-3 col-lg-3">
+            <a id"link01" href="#">
+             <div id="img01">
+                <img class="bottom" src="images/portnat06.jpg" />
+                <img class="top" src="images/port06.jpg" />
+          </div>   
+          </a>
+    </div>
+      <div class="col-sm-3 col-md-3 col-lg-3">
+          <a id"link01" href="#">
+             <div id="img01">
+                <img class="bottom" src="images/portnat08.jpg" />
+                <img class="top" src="images/port08.jpg" />
+          </div>   
+          </a>
+    </div>
+      
+  </div>
+</div>
+</div>    
+    
+	<script data-main="scripts/main" src="scripts/require.js"></script>
 </body>
 
 </html>
