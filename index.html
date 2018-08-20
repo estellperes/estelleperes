@@ -16,7 +16,153 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="js/jPopup.min.js"></script>
- 
+     <style>
+        
+        @font-face {
+    font-family: 'playfair_displayblack_italic';
+    src: url('fonts/playfairdisplay-blackitalic-webfont.woff2') format('woff2'),
+         url('fonts/playfairdisplay-blackitalic-webfont.woff') format('woff'),
+         url('fonts/playfairdisplay-blackitalic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'playfair_displaybold_italic';
+    src: url('fonts/playfairdisplay-bolditalic-webfont.woff2') format('woff2'),
+         url('fonts/playfairdisplay-bolditalic-webfont.woff') format('woff'),
+         url('fonts/playfairdisplay-bolditalic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'playfair_displayblack';
+    src: url('fonts/playfairdisplay-black_0-webfont.woff2') format('woff2'),
+         url('fonts/playfairdisplay-black_0-webfont.woff') format('woff'),
+         url('fonts/playfairdisplay-black_0-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'playfair_displayitalic';
+    src: url('fonts/playfairdisplay-italic-webfont.woff2') format('woff2'),
+         url('fonts/playfairdisplay-italic-webfont.woff') format('woff'),
+         url('fonts/playfairdisplay-italic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'playfair_displayregular';
+    src: url('fonts/playfairdisplay-regular_0-webfont.woff2') format('woff2'),
+         url('fonts/playfairdisplay-regular_0-webfont.woff') format('woff'),
+         url('fonts/playfairdisplay-regular_0-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'playfair_displaybold';
+    src: url('fonts/playfairdisplay-bold_0-webfont.woff2') format('woff2'),
+         url('fonts/playfairdisplay-bold_0-webfont.woff') format('woff'),
+         url('fonts/playfairdisplay-bold_0-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+        
+        
+        
+    body{
+    background-color:#5dcfd0;
+            
+     }
+    
+  .container{
+        width:85%;
+             
+        }
+    .col-sm-6{
+         padding:5%;
+            display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+        }
+    .col-md-6{
+         padding:5%;
+            display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+        }
+    .col-lg-6{
+        padding:5%;
+            display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+        }
+        
+h1{
+    color:#fff;
+    font-family: 'playfair_displayitalic';
+    font-size: 1.5em;
+    margin-top:100px;
+    width:100%;
+}
+        
+p{
+    
+   color:#fff;
+    font-family: 'playfair_displayregular';
+    font-size: 1.5em;
+    margin-top:70px;
+    width:100%; 
+        
+}
+
+.main, .first, .second, .third, .fourth{
+        margin-bottom:70px;
+        }
+         
+        
+    </style>
 
 <style>		
 
@@ -38,6 +184,7 @@
 				        backface-visibility: hidden;
 				will-change: overflow;
 			}
+
 			/*All the scrollable sections should overflow and be whatever height they need to be. As they are flex-items (due to being inside a flex container) they could be made to stretch full height at all times if needed.
 			WebKit inertia scrolling is being added here for any present/future devices that are able to make use of it.
 			*/
@@ -182,23 +329,45 @@ cette évidence.</div>
     
     
     
- <div id="properties" data-15200="top:100%; right:7%;opacity:0.0;" data-16000="top:0%;opacity:1.0;" data-16001="display:block;" data-16800="top:0%; display:none;opacity:1.0;">   
+ <div id="properties" data-15200="top:100%; right:7%;opacity:0.0;" data-16000="top:-10%;opacity:1.0;" data-16800="display:block;" data-17200="top:-10%; display:none;opacity:0.0;">   
     
     <div class="container"> 
   <div class="row">
     
       
       <div class="col-sm-3 col-md-3 col-lg-3">
-             <div id="img01"class="openPopupButton">
+             <div id="img01"class="openPopupButtona">
                 <img class="bottom" src="images/portnat04.jpg" />
                 <img class="top" src="images/port04.jpg" />
           </div> 
           
           <script>
 
-    document.querySelector('.openPopupButton').addEventListener('click', function() {
+    document.querySelector('.openPopupButtona').addEventListener('click', function() {
 
-        var demoContent = 'miw';
+        var demoContent = '<div class="container">\
+<div class="row">\
+<div class="col-sm-6 col-md-6 col-lg-6">\
+<div class="Content">\
+<div class="Left">\
+<img class="sympho" src="images/silence.png" />\
+<div class"textadj">\
+<p>Entre étrange et mystère, ce triptyque photographique, en réponse à sujet d’école sur la narration, dégage une énergie bien spéciale. En jouant sur la lumière, l’ombre, le jeu du modèle, et le nombre de prise de vu, j’ai essayé d’instaurer une ambience qui laisse le spectateur en suspens devant une scène qui ne semble avoir ni début, ni fin, ni même une direction au sens où il pourrait s’y attendre.<br><br><br><br>2013<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>\
+          </div>\
+          </div>\
+          </div>\
+          </div>\
+<div class="col-sm-6 col-md-6 col-lg-6">\
+<div class="Content">\
+<div class="Right">\
+<img class="main" src="images/ph03.jpg" />\
+<img class="first" src="images/ph02.jpg" />\
+<img class="second" src="images/ph01.jpg" />\
+          </div>\
+          </div>\
+          </div>\
+          </div>\
+          </div>';
 
         var jPopupDemo = new jPopup({
 
@@ -210,22 +379,133 @@ cette évidence.</div>
           
       </div>
       <div class="col-sm-3 col-md-3 col-lg-3">
-             <div id="img01"class="openPopupButton">
+             <div id="img01"class="openPopupButtonb">
                 <img class="bottom" src="images/portnat03.jpg" />
                 <img class="top" src="images/port03.jpg" />
-          </div>   
+          </div>  
+          
+          <script>
+
+    document.querySelector('.openPopupButtonb').addEventListener('click', function() {
+
+        var demoContent = '<div class="container">\
+<div class="row">\
+<div class="col-sm-6 col-md-6 col-lg-6">\
+<div class="Content">\
+<div class="Left">\
+<img class="sympho" src="images/oeil.png" />\
+<div class"textadj">\
+<p>Projet de signalétique réalisé pour le festival Ouvrez L’oeil à Pau. Nous sommes partis sur un système modulaire pouvant s’adapter à l’environnement puisque cette signalétique allait se retrouver à l’extérieur, et sur n’importe quel support. Les carrés disposés dans la ville créaient un chemin pour les visiteurs, comme un jeu de piste. En plus de ce support imprimé, nous avions travaillé sur un système de carte en temps réel que les visiteurs pouvait consulter en scannant un QRcode. Sa position était indiqué, ainsi que celle des différents lieux d’expositions et un bref résumé de celles-ci.<br><br><br><br>2014<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>\
+          </div>\
+          </div>\
+          </div>\
+          </div>\
+<div class="col-sm-6 col-md-6 col-lg-6">\
+<div class="Content">\
+<div class="Right">\
+<img class="main" src="images/o01.jpg" />\
+<img class="first" src="images/o05.jpg" />\
+<img class="second" src="images/o03.jpg" />\
+
+          </div>\
+          </div>\
+          </div>\
+          </div>\
+          </div>';
+
+        var jPopupDemo = new jPopup({
+
+            content: demoContent
+
+        });
+
+    });</script>
+          
     </div>
       <div class="col-sm-3 col-md-3 col-lg-3">
-             <div id="img01"class="openPopupButton">
+             <div id="img01"class="openPopupButtonc">
                 <img class="bottom" src="images/portnat01.jpg" />
                 <img class="top" src="images/port01.jpg" />
-          </div>   
+          </div> 
+          
+          <script>
+
+    document.querySelector('.openPopupButtonc').addEventListener('click', function() {
+
+        var demoContent = '<div class="container">\
+<div class="row">\
+<div class="col-sm-6 col-md-6 col-lg-6">\
+<div class="Content">\
+<div class="Left">\
+<img class="sympho" src="images/flow.png" />\
+<div class"textadj">\
+<p>Site web contemplatif musical en rapport direct avec ma synesthésie. Chaque couleur correspond à une mélodie propre crée par mes soins pour être au plus proche de mes sensations. L’utilisateur peut aussi prendre part à l’expérience en jouant avec les cercles qui traversent l’écran. Au survol de la souris des plus gros, un son grave se fera entendre, l\'\inverser pour les plus petits, créant ainsi une toute nouvelle mélodie mettant en oeuvre plusieurs sens.<br><br><br> Pour vivre l’expérience, <a href="flow/index.html">cliquez ici,</a> et n’oubliez pas votre casque !<br><br><br><br>2014<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>\
+          </div>\
+          </div>\
+          </div>\
+          </div>\
+<div class="col-sm-6 col-md-6 col-lg-6">\
+<div class="Content">\
+<div class="Right">\
+<img class="main" src="images/fl01.jpg" />\
+
+          </div>\
+          </div>\
+          </div>\
+          </div>\
+          </div>';
+
+        var jPopupDemo = new jPopup({
+
+            content: demoContent
+
+        });
+
+    });</script>
+          
     </div>
       <div class="col-sm-3 col-md-3 col-lg-3">
-             <div id="img01"class="openPopupButton">
+             <div id="img01"class="openPopupButtond">
                 <img class="bottom" src="images/portnat02.jpg" />
                 <img class="top" src="images/port02.jpg" />
           </div>   
+          
+          <script>
+
+    document.querySelector('.openPopupButtond').addEventListener('click', function() {
+
+        var demoContent = '<div class="container">\
+<div class="row">\
+<div class="col-sm-6 col-md-6 col-lg-6">\
+<div class="Content">\
+<div class="Left">\
+<img class="sympho" src="images/symphobl.png" />\
+<div class"textadj">\
+<h1>«  La musique c’est comme un grand huit. <br>Comme une impression d’apesanteur plus légère, de douceur. <br>Comme une plongée dans une eau chaude, où poissons et algues m’illuminent par leurs couleurs aussi belles que variées. <br><br>Parfois je suis comme entrainée dans un courant fort où plusieurs objets semblent m’effleurer, me toucher. <br><br>Je change de forme. <br>Je deviens piquante, gluante,<br>ou sans limites...  »</h1><p>C’est avec ce paragraphe que j’ai décidé d’introduire mon mémoire. Une petite touche de ma synesthésie pour commencer un voyage au coeur des sens.<br><br><br>Ce mémoire est habillé d’une couverture noire, suffisant rigide pour que le livre garde sa forme, mais aussi suffisament souple pour que sa manipulation soit aisée.Le titrage est imprimé en noir, ne le rendant lisible que lorsque que le livret est manipulé, grâce à un jeu de reflet avec la lumière.J’ai choisi une reliure à la japonaise avec un motif que j’ai créé en fonction de ma propre perception du mot synesthésie: un objet piquant en mouvance et de couleur jaune.<br><br><br>A l’intérieur, chaque chapitre est délimité par un encart très coloré résultant encore une fois de ma perception colorée des lettres et des mots. Ainsi pour le chapitre un, on retrouve un dégradé de coquille d’oeuf, de gris, de rouge, de marron, de jaune, d’une autre teinte de marron, de noir, de bleu ciel et finalement encore du rouge. <br><br><br>Dans ce mémoire j’ai voulu partager mes recherches assidues et passionée sur le sujet, mais aussi ma perception, pour un voyage à plusieurs sens.<br><br><br><br>2016</p>\
+          </div>\
+          </div>\
+          </div>\
+          </div>\
+<div class="col-sm-6 col-md-6 col-lg-6">\
+<div class="Content">\
+<div class="Right">\
+<img class="main" src="images/synes02.jpg" />\
+<img class="first" src="images/synes04.jpg" />\
+<img class="second" src="images/synes06.jpg" />\
+          </div>\
+          </div>\
+          </div>\
+          </div>\
+          </div>';
+
+        var jPopupDemo = new jPopup({
+
+            content: demoContent
+
+        });
+
+    });</script>
+          
     </div>
       
   </div>
@@ -233,34 +513,314 @@ cette évidence.</div>
     <div class="row">
     
       <div class="col-sm-3 col-md-3 col-lg-3">
-             <div id="img01"class="openPopupButton">
+             <div id="img01"class="openPopupButtone">
                 <img class="bottom" src="images/portnat05.jpg" />
                 <img class="top" src="images/port05.jpg" />
           </div>   
           
+          <script>
+
+    document.querySelector('.openPopupButtone').addEventListener('click', function() {
+
+        var demoContent = '<div class="container">\
+<div class="row">\
+<div class="col-sm-6 col-md-6 col-lg-6">\
+<div class="Content">\
+<div class="Left">\
+<img class="sympho" src="images/advbl.png" />\
+<div class"textadj">\
+<p>Pour cette année 2018, la société Adventure Rooms Pau a imaginé de multitudes de nouveautés pour ses joueurs, notamment la construction d’un nouvel escape game, et diverses malles de jeu à emporter chez soi.<br><br><br>\
+Ainsi, pour annoncer tous ces changements, il lui fallait un nouvel objet publicitaire à jour.<br><br>\
+Suivant leur désir, je suis partie sur l’élaboration d’un objet prenant la suite de leur ancien flyer. Il devait contenir beaucoup plus d’informations tout en restant percutant. <br><br><br>\
+J’ai opté pour un dépliant dans un format particulier, 297x155mm, se démarquant ainsi des autres produits publicitaires déjà de par sa forme. <br><br>Il est aussi très pratique, et trouve facilement sa place dans un petit sac. <br><br>J’ai choisi un papier à 250g/m² pour lui donner plus de corps, un meilleur fini, ainsi qu’une meilleure résistance.<br><br><br>Le choix des couleurs faisait parti du  cahier des charges et devait reprendre les couleurs principales du logo d’Adventure Rooms.<br><br>Le contenu à été designé avec des lignes directrices pour faciliter la lecture et structurer le contenu mais aussi pour rappeler le principe même des escapes games, qui est comme un espace jonché d’obstacles dont il faut trouver le fil rouge pour parvenir à sortir.<br><br><br><br>2018</p>\
+          </div>\
+          </div>\
+          </div>\
+          </div>\
+<div class="col-sm-6 col-md-6 col-lg-6">\
+<div class="Content">\
+<div class="Right">\
+<img class="main" src="images/depli04.jpg" />\
+<img class="first" src="images/depli03.jpg" />\
+<img class="second" src="images/depli02.jpg" />\
+<img class="third" src="images/depli01.jpg" />\
+          </div>\
+          </div>\
+          </div>\
+          </div>\
+          </div>';
+
+        var jPopupDemo = new jPopup({
+
+            content: demoContent
+
+        });
+
+    });</script>
+          
     </div>
       <div class="col-sm-3 col-md-3 col-lg-3">
-             <div id="img01"class="openPopupButton">
+             <div id="img01"class="openPopupButtonf">
                 <img class="bottom" src="images/portnat07.jpg" />
                 <img class="top" src="images/port07.jpg" />
-          </div>   
+          </div> 
+          
+          <script>
+
+    document.querySelector('.openPopupButtonf').addEventListener('click', function() {
+
+        var demoContent = '<div class="container">\
+<div class="row">\
+<div class="col-sm-6 col-md-6 col-lg-6">\
+<div class="Content">\
+<div class="Left">\
+<img class="sympho" src="images/malle.png" />\
+<div class"textadj">\
+<p>Cet escape game était à l’origine sous forme d’une petite pièce facilement montable pour faire découvrir les escape games lors de conventions geek.<br>Trouvant dommage de ne rendre accessible ce scénario qu’à un public très restreint, j’ai proposé d’adapter le jeu dans une forme plus facilement transportable et surtout jouable sans game master pour le proposer à la location pour n’importe quelle occasion, autant pour les particuliers que pour les professionnels.<br<br><br>Une fois la proposition acceptée j’ai donc endossé le rôle de la directrice artistique. J’ai designé la malle donnant mes indications à l’équipe chargée de la construction.<br><br>J’ai aussi dû adapter certaines énigmes au format et en créer de nouvelles, tout en gardant en tête les contraintes de level design.<br><br>Après avoir porté ces différentes casquettes de créateur, je me suis chargée des peintures de la malle, alternant diverses techniques pour arriver à un rendu des plus net.<br><br>Pour rendre les joueurs totalement indépendants pendant le jeu, j’ai imaginé un moyen simple pour eux d’avoir accès aux indices que le game master donne normalement au cours de la partie. En m’inspirant des carnets de solutions de divers jeux, j’ai designé le carnet de la malle (cf projet suivant).<br><br><br><br>2018</p>\
+          </div>\
+          </div>\
+          </div>\
+          </div>\
+<div class="col-sm-6 col-md-6 col-lg-6">\
+<div class="Content">\
+<div class="Right">\
+<img class="main" src="images/malle01.jpg" />\
+<img class="first" src="images/malle02.jpg" />\
+<img class="second" src="images/malle03.jpg" />\
+<img class="third" src="images/malle04.jpg" />\
+<img class="fourth" src="images/malle05.jpg" />\
+          </div>\
+          </div>\
+          </div>\
+          </div>\
+          </div>';
+
+        var jPopupDemo = new jPopup({
+
+            content: demoContent
+
+        });
+
+    });</script>
+          
     </div>
       <div class="col-sm-3 col-md-3 col-lg-3">
-             <div id="img01"class="openPopupButton">
+             <div id="img01"class="openPopupButtong">
                 <img class="bottom" src="images/portnat06.jpg" />
                 <img class="top" src="images/port06.jpg" />
-          </div>   
+          </div> 
+          
+          <script>
+
+    document.querySelector('.openPopupButtong').addEventListener('click', function() {
+
+        var demoContent = '<div class="container">\
+<div class="row">\
+<div class="col-sm-6 col-md-6 col-lg-6">\
+<div class="Content">\
+<div class="Left">\
+<img class="sympho" src="images/carnet.png" />\
+<div class"textadj">\
+<p>J’ai décliné le format du livret de solution pour une autre adaptation d’escape game.Pour les deux malles le livret se présente de la même manière:<br><br><br>-la couverture reprennant le thème du jeu, son nom et le nom de la société qui le propose.<br><br><br>- la 4e de couverture interpelle le joueur pour lui rapeller le fait que le carnet contienne les solutions et qu’il vaut mieux ne pas l’ouvrir n’importe où. Il l’informe aussi brièvement sur le fonctionnement du carnet.<br><br><br>- le contenu se découpe en deux grandes parties. Les premières pages sont dédiés aux consignes de jeu et au scénario.Les indices sont classés en fonction du déroulé des énigmes pour que le joueur ait toujours une indication cohérente avec son problème.Par exemple sur le carnet d’indices de la malle geek, j’ai découpé les indices en fonction des cadenas et de leur ordre d’ouverture. Ainsi le joueur, en ouvrant le carnet a déjà une indication sur le cadenas à ouvrir en premier lieu ce qui peut parfois débloquer une situation. Si la solution n’est pas trouvée, il peut alors tourner les pages pour découvrir les indices jusqu’à l’ouverture du cadenas.<br><br><br><br>2018</p>\
+          </div>\
+          </div>\
+          </div>\
+          </div>\
+<div class="col-sm-6 col-md-6 col-lg-6">\
+<div class="Content">\
+<div class="Right">\
+<img class="main" src="images/geek06.jpg" />\
+<img class="first" src="images/geek05.jpg" />\
+<img class="second" src="images/geek03.jpg" />\
+<img class="main" src="images/geek02.jpg" />\
+<img class="first" src="images/geek04.jpg" />\
+<img class="first" src="images/meli01.jpg" />\
+<img class="second" src="images/meli02.jpg" />\
+<img class="main" src="images/meli03.jpg" />\
+<img class="first" src="images/meli04.jpg" />\
+          </div>\
+          </div>\
+          </div>\
+          </div>\
+          </div>';
+
+        var jPopupDemo = new jPopup({
+
+            content: demoContent
+
+        });
+
+    });</script>
+          
     </div>
       <div class="col-sm-3 col-md-3 col-lg-3">
-             <div id="img01"class="openPopupButton">
+             <div id="img01"class="openPopupButtonh">
                 <img class="bottom" src="images/portnat08.jpg" />
                 <img class="top" src="images/port08.jpg" />
-          </div>   
+          </div>
+          
+          <script>
+
+    document.querySelector('.openPopupButtonh').addEventListener('click', function() {
+
+        var demoContent = '<div class="container">\
+<div class="row">\
+<div class="col-sm-6 col-md-6 col-lg-6">\
+<div class="Content">\
+<div class="Left">\
+<img class="sympho" src="images/ed12ex.png" />\
+<div class"textadj">\
+<p>Se voulant toujours plus immersif dans leurs salles, Adventure Rooms Pau m’a demandé de leur créer l’écusson de leur vaisseau spatial, le ED-12 Explorer.<br>J’ai donc réalisé une illustration du vaisseau selon le cahier des charges de celui-ci: un vaisseau tout en longueur, caractéristique des films et séries de science fiction, doté d’une large vitre à l’avant permettant une bonne vision de l’environnement, car ce vaisseau est un engin d’exploration.<br><br><br>Je me suis inspirée de nombreux écussons existants, réels ou fictionnels pour réaliser celui-ci. J’ai choisi un style et des couleurs « old school » à la demande des commanditaires. J’ai mis l’accent sur la mission d’exploration du vaisseau en mettant en fond une planète autour de laquelle il semble être en orbite.<br><br><br>J’ai réalisé une version destinée à l’impression de stickers, mais aussi à la broderie, qui devait être plus simple au niveau des couleurs, mais surtout sans dégradés, difficilement réalisables avec ce procédé et le budget. <br><br><br><br>2018</p>\
+          </div>\
+          </div>\
+          </div>\
+          </div>\
+<div class="col-sm-6 col-md-6 col-lg-6">\
+<div class="Content">\
+<div class="Right">\
+<img class="main" src="images/ed12ex.jpg" />\
+
+          </div>\
+          </div>\
+          </div>\
+          </div>\
+          </div>';
+
+        var jPopupDemo = new jPopup({
+
+            content: demoContent
+
+        });
+
+    });</script>
+          
     </div>
       
   </div>
 </div>
-</div>    
+</div> 
+    
+
+<div id="properties" data-16800="top:100%; right:7%;opacity:0.0;" data-17600="top:-10%;opacity:1.0;" data-18201="display:block;" data-19000="top:-10%; display:none;opacity:1.0;">   
+    
+    <div class="container"> 
+  <div class="row">
+    
+      
+      <div class="col-sm-3 col-md-3 col-lg-3">
+             <div id="img01"class="openPopupButtoni">
+                <img class="bottom" src="images/portnat09.jpg" />
+                <img class="top" src="images/port09.jpg" />
+          </div> 
+          
+          <script>
+
+    document.querySelector('.openPopupButtoni').addEventListener('click', function() {
+
+        var demoContent = '<div class="container">\
+<div class="row">\
+<div class="col-sm-6 col-md-6 col-lg-6">\
+<div class="Content">\
+<div class="Left">\
+<img class="sympho" src="images/naturebl.png" />\
+<div class"textadj">\
+<p>Nature Céleste est le nom d’une marque de bijoux et décorations que j’ai créé. Jonglant entre résine écologique, cristal Swarowsky, apprêt doré sans nickel et produits majoritairement fabriqué en Europe, je m’efforcais d’inscrire mes créations dans des thématiques telles que la douceur, la féminité, la magie et la féérie, touchant ainsi autant les jeunes filles que les adultes.<br><br><br>Dans un thème très doux, féminin, et aux couleurs pastels, j’ai donc créé le logo, la carte de visite, les packagings et le site vitrine tout en gardant en tête leur rôle de mise en valeur des produits.<br><br><br>Le packaging se veut minimaliste pour une faible empreinte écologique. Il est autant objet support, objet de mise en valeur, et il fait aussi office de carte de visite, limitant ainsi la consomation de papier et de plastique.<br><br><br><br>2017<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>\
+          </div>\
+          </div>\
+          </div>\
+          </div>\
+<div class="col-sm-6 col-md-6 col-lg-6">\
+<div class="Content">\
+<div class="Right">\
+<img class="main" src="images/nat.jpg" />\
+<img class="first" src="images/nat01.jpg" />\
+<img class="second" src="images/nat02.jpg" />\
+<img class="second" src="images/nat03.jpg" />\
+          </div>\
+          </div>\
+          </div>\
+          </div>\
+          </div>';
+
+        var jPopupDemo = new jPopup({
+
+            content: demoContent
+
+        });
+
+    });</script>
+          
+      </div>
+      <div class="col-sm-3 col-md-3 col-lg-3">
+             <div id="img01"class="openPopupButtonj">
+                <img class="bottom" src="images/portnat10.jpg" />
+                <img class="top" src="images/port10.jpg" />
+          </div>  
+          
+          <script>
+
+    document.querySelector('.openPopupButtonj').addEventListener('click', function() {
+
+        var demoContent = '<div class="container">\
+<div class="row">\
+<div class="col-sm-6 col-md-6 col-lg-6">\
+<div class="Content">\
+<div class="Left">\
+<img class="sympho" src="images/pubbl.png" />\
+<div class"textadj">\
+<pEncore une fois pour une question d’immersion, mais aussi pour inscrire leur salle dans un contexte vraisemblable, j’ai créé plusieurs affiches et objets publicitaires intégrés dans le vaisseau ED-12 Explorer de la société Adventure Rooms Pau.<br><br><br>J’ai réalisé à leur demande des objets publicitaires que l’on pourrait hypothétiquement retrouver dans un futur où la conquête de l’espace est avancé. En prennant pour référence plusieurs séries de science fiction ou anticipation que j’affectionne, j’ai réalisé ces publicités du futur. On peut donc y retrouver des clins d’oeils à Futurama, Dr Who, ou encore Real Human.br><br><br><br>2018<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></p>\
+          </div>\
+          </div>\
+          </div>\
+          </div>\
+<div class="col-sm-6 col-md-6 col-lg-6">\
+<div class="Content">\
+<div class="Right">\
+<img class="main" src="images/midnight.jpg" />\
+<img class="first" src="images/bellqtrix.jpg" />\
+<img class="second" src="images/robot.jpg" />\
+<img class="second" src="images/jup.jpg" />\
+
+          </div>\
+          </div>\
+          </div>\
+          </div>\
+          </div>';
+
+        var jPopupDemo = new jPopup({
+
+            content: demoContent
+
+        });
+
+    });</script>
+          
+    </div>
+      <div class="col-sm-3 col-md-3 col-lg-3">
+             <a id="img01"class="openPopupButtonk" href="#">
+                <img class="bottom" src="images/portnat11.jpg" />
+                <img class="top" src="images/port11.jpg" />
+          </a> 
+          
+          
+          
+    </div>
+      <div class="col-sm-3 col-md-3 col-lg-3">
+             <div id="img01"class="openPopupButtonl">
+
+                <img class="top" src="images/port12.jpg" />
+          </div>   
+          
+          
+    </div>
+      
+  </div>
+    
+
+
+
+</div>
+</div>
     
 	<script data-main="scripts/main" src="scripts/require.js"></script>
 </body>

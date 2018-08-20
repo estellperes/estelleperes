@@ -103,11 +103,11 @@ html, body {
 
 body {
 	background: #eeeeee;
-	background: -webkit-linear-gradient(top, #000d29, #000 100%);
-	background: -moz-linear-gradient(top, #000d29, #000 100%);
-	background: -o-linear-gradient(top, #000d29, #000 100%);
-	background: -ms-linear-gradient(top, #000d29, #000 100%);
-	background: linear-gradient(top, #000d29, #000 100%);
+	background: rgb(20,0,38);
+background: -moz-linear-gradient(0deg, rgba(20,0,38,1) 0%, rgba(1,0,29,1) 32%, rgba(0,0,19,1) 66%, rgba(3,0,33,1) 100%);
+background: -webkit-linear-gradient(0deg, rgba(20,0,38,1) 0%, rgba(1,0,29,1) 32%, rgba(0,0,19,1) 66%, rgba(3,0,33,1) 100%);
+background: linear-gradient(0deg, rgba(20,0,38,1) 0%, rgba(1,0,29,1) 32%, rgba(0,0,19,1) 66%, rgba(3,0,33,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#140026",endColorstr="#030021",GradientType=1);
 	background-attachment:fixed;
 }
 
