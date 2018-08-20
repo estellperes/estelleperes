@@ -5,24 +5,98 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-	<title>skrollr - parallax scrolling for the masses</title>
+	<title>Estelle PERES</title>
 
 	<link href="fixed-positioning.css" rel="stylesheet" type="text/css" />
 	<link href="main.css" rel="stylesheet" type="text/css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script async defer="defer" src="https://buttons.github.io/buttons.js"></script>
+    <link href="css/jPopup.css" rel="stylesheet" type="text/css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    
-    <style type="text/css">
-	#thing {
-		width:32px;
-		height:32px;
-		border-radius:16px;
-		background:#fff;
-	}
-	</style>
+    <script src="js/jPopup.min.js"></script>
+ 
 
+<style>		
+
+
+
+			/*This is our main wrapping element, it's made 100vh high to ensure it is always the correct size and then moved into place and padded with negative margin and padding*/
+			.Content {
+				display: -webkit-box;
+				display: -webkit-flex;
+				display: -ms-flexbox;
+				display: flex;
+				overflow: hidden;
+				height: 100vh;
+				margin-top: -100px;
+				padding-top: 100px;
+				position: relative;
+				width: 100%;
+				-webkit-backface-visibility: hidden;
+				        backface-visibility: hidden;
+				will-change: overflow;
+			}
+			/*All the scrollable sections should overflow and be whatever height they need to be. As they are flex-items (due to being inside a flex container) they could be made to stretch full height at all times if needed.
+			WebKit inertia scrolling is being added here for any present/future devices that are able to make use of it.
+			*/
+			.Left,
+			.Right {
+				overflow: auto;
+				height: auto;
+				padding: .5rem;
+				-webkit-overflow-scrolling: touch;
+				-ms-overflow-style: none;
+        display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+			}
+			/*Entirely optional – just wanted to remove the scrollbar on WebKit browsers as I find them ugly*/
+			.Left::-webkit-scrollbar,
+			.Right::-webkit-scrollbar {
+				display: none;
+			}
+			/*	Left and Right are set sizes while the Middle is set to flex one so it occupies all remaining space. This could be set as a width too if prefereable, perhaps using calc.*/
+			.Left {
+/*				width: 12.5rem;*/
+/*				background-color: indigo;*/
+                margin-left:10%;
+			}
+
+
+			.Right {
+/*				width: 12.5rem;*/
+/*				background-color: violet;*/
+        margin-right:10%;
+			}
+    
+/*
+    .container{
+    
+    display: -webkit-box;
+				display: -webkit-flex;
+				display: -ms-flexbox;
+				display: flex;
+				overflow: hidden;
+				height: 100vh;
+				margin-top: -100px;
+				padding-top: 100px;
+				position: relative;
+				width: 100%;
+				-webkit-backface-visibility: hidden;
+				        backface-visibility: hidden;
+				will-change: overflow;
+			}
+*/
+
+    
+		</style>  
 </head>
 
 <body>
@@ -115,37 +189,43 @@ cette évidence.</div>
     
       
       <div class="col-sm-3 col-md-3 col-lg-3">
-          <a id"link01" href="#">
-             <div id="img01">
+             <div id="img01"class="openPopupButton">
                 <img class="bottom" src="images/portnat04.jpg" />
                 <img class="top" src="images/port04.jpg" />
-          </div>   
-          </a>
+          </div> 
+          
+          <script>
+
+    document.querySelector('.openPopupButton').addEventListener('click', function() {
+
+        var demoContent = 'miw';
+
+        var jPopupDemo = new jPopup({
+
+            content: demoContent
+
+        });
+
+    });</script>
           
       </div>
       <div class="col-sm-3 col-md-3 col-lg-3">
-            <a id"link01" href="#">
-             <div id="img01">
+             <div id="img01"class="openPopupButton">
                 <img class="bottom" src="images/portnat03.jpg" />
                 <img class="top" src="images/port03.jpg" />
           </div>   
-          </a>
     </div>
       <div class="col-sm-3 col-md-3 col-lg-3">
-            <a id"link01" href="#">
-             <div id="img01">
+             <div id="img01"class="openPopupButton">
                 <img class="bottom" src="images/portnat01.jpg" />
                 <img class="top" src="images/port01.jpg" />
           </div>   
-          </a>
     </div>
       <div class="col-sm-3 col-md-3 col-lg-3">
-           <a id"link01" href="#">
-             <div id="img01">
+             <div id="img01"class="openPopupButton">
                 <img class="bottom" src="images/portnat02.jpg" />
                 <img class="top" src="images/port02.jpg" />
           </div>   
-          </a>
     </div>
       
   </div>
@@ -153,37 +233,29 @@ cette évidence.</div>
     <div class="row">
     
       <div class="col-sm-3 col-md-3 col-lg-3">
-          <a id"link01" href="#">
-             <div id="img01">
+             <div id="img01"class="openPopupButton">
                 <img class="bottom" src="images/portnat05.jpg" />
                 <img class="top" src="images/port05.jpg" />
           </div>   
-          </a>
           
     </div>
       <div class="col-sm-3 col-md-3 col-lg-3">
-            <a id"link01" href="#">
-             <div id="img01">
+             <div id="img01"class="openPopupButton">
                 <img class="bottom" src="images/portnat07.jpg" />
                 <img class="top" src="images/port07.jpg" />
           </div>   
-          </a>
     </div>
       <div class="col-sm-3 col-md-3 col-lg-3">
-            <a id"link01" href="#">
-             <div id="img01">
+             <div id="img01"class="openPopupButton">
                 <img class="bottom" src="images/portnat06.jpg" />
                 <img class="top" src="images/port06.jpg" />
           </div>   
-          </a>
     </div>
       <div class="col-sm-3 col-md-3 col-lg-3">
-          <a id"link01" href="#">
-             <div id="img01">
+             <div id="img01"class="openPopupButton">
                 <img class="bottom" src="images/portnat08.jpg" />
                 <img class="top" src="images/port08.jpg" />
           </div>   
-          </a>
     </div>
       
   </div>
